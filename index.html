@@ -47,6 +47,20 @@
             text-decoration: none;
           }
           .gm-style img { max-width: none; }
+          body {
+        background-color: #000001;
+        transition: 2s;
+        }
+
+        #container {
+        text-align: center;
+        color: #ffffff;
+        /* font-family: arial, helvetica, sans-serif; */
+  /* font-weight: bolder; */
+  /* font-size: 120px; */
+  text-transform: uppercase;
+  transition: 1s;
+}
     </style>
     
   </head>
@@ -111,6 +125,20 @@
 <script type="text/javascript">
   (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46673046 = new Ya.Metrika({ id:46673046, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
 </script>
+<script>
+      window.setInterval(function(){
+
+var randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+
+$('body').css({
+  'background-color' : randomColor,
+});
+
+}, 2000);
+</script>
+
+
+
 <noscript>
   &lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/46673046" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;
 </noscript>
