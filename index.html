@@ -5,11 +5,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Entrepreneur, Software engineer, Programmer, Linux lover, and Machine learning expert.">
-        <style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+        <style type="text/css">
+        .gm-style-pbc{
+            transition:opacity ease-in-out;
+            background-color:rgba(0,0,0,0.45);
+            text-align:center;
+            }
+        .gm-style-pbt{
+            font-size:22px;color:white;
+            font-family:Roboto,Arial,sans-serif;
+            position:relative;
+            margin:0;
+            top:50%;
+            -webkit-transform:translateY(-50%);
+            -ms-transform:translateY(-50%);
+            transform:translateY(-50%);
+        }
         </style>
     
     <script type="text/javascript" async="" src="./static/javscript/watch.js"></script>
-    <script type="text/javascript">!function(r){function e(t){if(o[t])return o[t].exports;var n=o[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,e),n.loaded=!0,n.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var t=o(1).Rollbar,n=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://d37gvrvc0wt4s1.cloudfront.net/js/v1.9/rollbar.min.js";var a=t.init(window,_rollbarConfig),i=n(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(e){try{console.error("[Rollbar]: Internal error",e)}catch(o){}}}}function t(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function n(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);t(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,t="scope"===r;t&&(o=new e(this));var n=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:n,ts:new Date};return window._rollbarShimQueue.push(a),t?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,t,n){o.call(this,e,r.wrap(t),n)};var t=e.removeEventListener;e.removeEventListener=function(r,e,o){t.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var t=e.globalAlias||"Rollbar";if("object"==typeof r[t])return r[t];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=n(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,t=r.detail;!e&&t&&(e=t.reason,o=t.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[t]=i,i})()},a.prototype.loadFull=function(r,e,t,n,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,t,n,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(n=o.args,i=0;i<n.length;++i)if(t=n[i],"function"==typeof t){t(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),d=e.getElementsByTagName("script")[0],p=d.parentNode;c.crossOrigin="",c.src=n.rollbarJsUrl,c.async=!t,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{p.removeChild(c)}catch(r){}l=!0,i()}}),p.insertBefore(c,d)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var t in r)r.hasOwnProperty(t)&&(r._wrapped[t]=r[t])}return r._wrapped}catch(n){return r}};for(var d="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),p=0;p<d.length;++p)a.prototype[d[p]]=i(d[p]);r.exports={Rollbar:a,_rollbarWindowOnError:t}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var t=window.RollbarNotifier,n=e||{},a=n.globalAlias||"Rollbar",i=window.Rollbar.init(n,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,t.processPayloads()}}}}]);
+    <script type="text/javascript">
+    !function(r){function e(t){if(o[t])return o[t].exports;var n=o[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,e),n.loaded=!0,n.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var t=o(1).Rollbar,n=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://d37gvrvc0wt4s1.cloudfront.net/js/v1.9/rollbar.min.js";var a=t.init(window,_rollbarConfig),i=n(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(e){try{console.error("[Rollbar]: Internal error",e)}catch(o){}}}}function t(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function n(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);t(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,t="scope"===r;t&&(o=new e(this));var n=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:n,ts:new Date};return window._rollbarShimQueue.push(a),t?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,t,n){o.call(this,e,r.wrap(t),n)};var t=e.removeEventListener;e.removeEventListener=function(r,e,o){t.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var t=e.globalAlias||"Rollbar";if("object"==typeof r[t])return r[t];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=n(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,t=r.detail;!e&&t&&(e=t.reason,o=t.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[t]=i,i})()},a.prototype.loadFull=function(r,e,t,n,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,t,n,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(n=o.args,i=0;i<n.length;++i)if(t=n[i],"function"==typeof t){t(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),d=e.getElementsByTagName("script")[0],p=d.parentNode;c.crossOrigin="",c.src=n.rollbarJsUrl,c.async=!t,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{p.removeChild(c)}catch(r){}l=!0,i()}}),p.insertBefore(c,d)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var t in r)r.hasOwnProperty(t)&&(r._wrapped[t]=r[t])}return r._wrapped}catch(n){return r}};for(var d="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),p=0;p<d.length;++p)a.prototype[d[p]]=i(d[p]);r.exports={Rollbar:a,_rollbarWindowOnError:t}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var t=window.RollbarNotifier,n=e||{},a=n.globalAlias||"Rollbar",i=window.Rollbar.init(n,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,t.processPayloads()}}}}]);
     </script>
     
     <title>Muhammad Faisal - pro-programmer and machine learning expert</title>
@@ -24,19 +40,19 @@
     
     <link rel="canonical" href="https://imfaisal.com/Default.html"/>
     <link rel="shortcut icon" href="./resources/images/f.png" type="image/x-icon">
-    <link href="./static/style/css" rel="stylesheet">
-    <link href="./static/style/css(1)" rel="stylesheet">
-    <link rel="stylesheet" media="all" href="./static/style/crypton-e2100b8f52baadf0cf8f44121317748de44ec2c7ebb329ee49e339e29d72a4a9.css">
-    <script type="text/javascript" charset="UTF-8" src="./static/javascript/common.js"></script><script type="text/javascript" charset="UTF-8" src="./static/javascript/util.js"></script><script type="text/javascript" charset="UTF-8" src="./static/javascript/map.js"></script><style type="text/css">.gm-style {
+    <link rel="stylesheet" media="all" href="./static/style/style.css">
+    <style type="text/css">
+    .gm-style {
             font: 400 11px Roboto, Arial, sans-serif;
             text-decoration: none;
           }
-          .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="./static/javascript/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./static/javascript/stats.js"></script>
+          .gm-style img { max-width: none; }
+    </style>
     
   </head>
-<body class="chrome linux" style="">
+<body class="chrome linux" style="font-family: monospace;">
 <nav class="header-nav">
-<a class="nav-main_brand" href="https://imfaisal.com/"><span>0</span><span>_</span><span>0</span></a>
+<a class="nav-main_brand" href="https://www.imfaisal.com/"><span>0</span><span>_</span><span>0</span></a>
 <div class="menu-toggle js-menuToggle">...</div>
 
 <ul class="b_menu">
@@ -55,19 +71,19 @@
 </ul>
 
 <div class="social-share">
-<div class="social-share__title">Connect</div>
+<div class="social-share__title" >Connect</div>
 <ul class="social-share__list">
     <li class="social-share__item">
-        <a class="share  social-share__link" href="https://www.linkedin.com/in/mfaisalpk/">LinkedIn</a>
+        <a class="share  social-share__link" target="_blank" href="https://www.linkedin.com/in/mfaisalpk/">LinkedIn</a>
         </li>
         <li class="social-share__item">
-        <a class="share  social-share__link" href="https://github.com/imfaisalpk">Github</a>
+        <a class="share  social-share__link" target="_blank" href="https://github.com/imfaisalpk">Github</a>
         </li>
             <li class="social-share__item">
-            <a class="share  social-share__link" href="https://twitter.com/mfaisaldotpk">Twitter</a>
+            <a class="share  social-share__link" target="_blank"href="https://twitter.com/mfaisaldotpk">Twitter</a>
             </li>
             <li class="social-share__item">
-                <a class="share  social-share__link" href="https://www.instagram.com/mfaisal.pk">Instagram</a>
+                <a class="share  social-share__link" target="_blank" href="https://www.instagram.com/mfaisal.pk">Instagram</a>
                 </li>
 
 
@@ -90,8 +106,7 @@
 
 
 <div class="null_frame"></div>
-<script src="./static/javascript/crypton-fc19d82109d11e83822963320a4f99d6e17f99b011dbeae09528d20a48dfc2d1.js"></script>
-<script src="./static/javascript/js" async="async" defer="defer"></script>
+<script src="./static/javascript/main.js"></script>
 
 <script type="text/javascript">
   (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46673046 = new Ya.Metrika({ id:46673046, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
@@ -103,4 +118,5 @@
 
 
 <div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div><span style="font-family: monospace; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, monospace;">giItT1WQy@!-/#</span></span><span style="font-family: sans-serif; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, sans-serif;">giItT1WQy@!-/#</span></span><span style="font-family: monospace; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, monospace;">giItT1WQy@!-/#</span></span><span style="font-family: sans-serif; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, sans-serif;">giItT1WQy@!-/#</span></span><span style="font-family: monospace; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, monospace;">giItT1WQy@!-/#</span></span><span style="font-family: sans-serif; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, sans-serif;">giItT1WQy@!-/#</span></span><span style="font-family: monospace; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, monospace;">giItT1WQy@!-/#</span></span><span style="font-family: sans-serif; position: absolute; left: -10000px; top: -10000px; font-size: 300px; font-variant: normal; font-style: normal; font-weight: normal; letter-spacing: 0px;"><span style="font-family: &quot;Space Mono&quot;, sans-serif;">giItT1WQy@!-/#</span></span> 
-</body></html>
+</body>
+</html>
